@@ -2,35 +2,33 @@
 <html>
 <head>
   <title>ToDoアプリ</title>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" />
 </head>
 <body>
 <div id="app" class="container">
-    <h1 class="header__title">ToDoアプリ</h1>
+  <h1 class="header__title">ToDoアプリ</h1>
     <form>
-        <div class="row">
+      <div class="row">
           <div class="six columns">
-            <!-- <label>ToDoを追加してね！</label> -->
             <input  placeholder="ToDoを入力" class="u-full-width" v-model="newTodo">
           </div>
           <div class="six columns">
             <input class="button-primary" type="submit" value="追加" @click="addTodo">
           </div>
-        </div>
+      </div>
     </form>
     <div class="container" v-for="(todo, n) in todos">
-        <div class="row"> 
-            <div class="six columns">
-                <span class="todo">・{{ todo }}</span>
-            </div>
-            <div class="six columns">
-              <button @click="removeTodo(n)">削除する</button>
-            </div>
-        </div>
+      <div class="row">
+          <div class="six columns">
+            <span class="todo">・{{ todo }}</span>
+          </div>
+          <div class="six columns">
+            <button @click="removeTodo(n)">削除する</button>
+          </div>
+      </div>
     </div>
 </div>
   <script src="https://unpkg.com/vue@next"></script>
   <script src="todo.js"></script>
 </body>
 </html>
-
