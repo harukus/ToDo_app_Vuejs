@@ -27,8 +27,8 @@ Vue.createApp({
       const parsed = JSON.stringify(this.todos);
       localStorage.setItem('todos', parsed);
     },
-    removeTodo(x) {
-      this.todos.splice(x, 1);
+    removeTodo(id) {
+      this.todos.splice(id, 1);
       this.saveTodos();
     },
   },

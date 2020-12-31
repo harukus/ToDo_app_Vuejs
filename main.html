@@ -17,13 +17,13 @@
           </div>
       </div>
     </form>
-    <div class="container" v-for="(todo, n) in todos">
+    <div class="container" v-for="(todo, id) in todos">
       <div class="row">
           <div class="six columns">
             <span class="todo">・{{ todo }}</span>
           </div>
           <div class="six columns">
-            <button @click="removeTodo(n)">削除する</button>
+            <button @click="removeTodo(id)">削除する</button>
           </div>
       </div>
     </div>
